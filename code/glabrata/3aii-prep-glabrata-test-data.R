@@ -1,4 +1,4 @@
-## CODE TO SET UP DATA FOR FINAL SCHISTO ANALYSIS FOR GLABRATA
+## code to clean test data for B. glabrata model (2000-2017 data)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
