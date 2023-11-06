@@ -1,4 +1,5 @@
-############# plots for standard deviation of maps
+############# plots for standard deviation of model predictions
+
 library(raster)
 library(RColorBrewer)
 base_palette <- brewer.pal(9, name = "Greys")
