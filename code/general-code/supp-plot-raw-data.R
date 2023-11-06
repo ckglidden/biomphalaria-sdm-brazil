@@ -1,15 +1,14 @@
-######### code to prepare dataframes for creating maps
+######### code to create rasters for each feature
+
 library(raster)
 library(sf)
 library(ggplot2)
 library(RColorBrewer)
 
-##----------------------------------------------------##
-## ENVIRONMENTAL DATA --------------------------------##
-##----------------------------------------------------##
+##----------------##
+## Base data      ##
+##----------------##
 
-##########################################################
-########## time invariant ##########
 base_palette <- brewer.pal(9, name = "Purples")
   
 water_recurrence <- raster("raw_data/env_rasters/base_data/waterRecur.tif")
@@ -102,9 +101,9 @@ plot(soil_density,
      col = base_palette[2:9])
 dev.off()
 
-
-##########################################################
-########## land-use ##########
+##----------------##
+## land-use       ##
+##----------------##
 lulc_palette <- brewer.pal(9, name = "PuBuGn")
 lulc_diff <- brewer.pal(9, name = "PRGn") 
   
@@ -115,10 +114,6 @@ diff_ag_mosiac <- ag_mosiac2 - ag_mosiac1
 temp_crops1 <- raster("raw_data/env_rasters/historical_data/temp_crops.tif")
 temp_crops2 <- raster("raw_data/env_rasters/current_data/temp_crops.tif")
 diff_temp_crops <- temp_crops2 - temp_crops1
-
-total_population1 <- raster("raw_data/env_rasters/historical_data/total_population.tif")
-total_population2 <- raster("raw_data/env_rasters/current_data/total_population.tif")
-diff_total_population <- log(total_population2 + 1) - log(total_population1 + 1)
 
 distance_int_pop1 <- raster("raw_data/env_rasters/historical_data/distance_int_pop.tif")
 distance_int_pop2 <- raster("raw_data/env_rasters/current_data/distance_int_pop.tif")
@@ -132,7 +127,7 @@ pdf("../output/all_snails/lulc_raster_supplement.pdf")
 par(mfrow = c(5, 3), mar = c(0.5, 2, 0.5, 2), bty = 'n')
 # ag
 plot(ag_mosiac1,
-     main = "a. ag mosiac 1993",
+     main = "a. ag mosiac 1992",
      axes = F, frame.plot=FALSE,
      zlim = c(0,1),
      col = lulc_palette[2:9])
@@ -150,7 +145,7 @@ plot(diff_ag_mosiac,
 
 # temp crops
 plot(temp_crops1,
-     main = "d. temp crops 1993",
+     main = "d. temp crops 1992",
      axes = F, frame.plot=FALSE,
      zlim = c(0,1),
      col = lulc_palette[2:9])
@@ -166,66 +161,44 @@ plot(diff_temp_crops,
      axes = F, frame.plot=FALSE,
      col = lulc_diff)
 
-# population
-plot(log(total_population1 + 1),
-     main = "g. log(population + 1)
-     1993",
-     zlim = c(0, 12),
+# urban gradient
+plot(urban_gradiet1992,
+     main = "g. urban gradient 1992",
      axes = F, frame.plot=FALSE,
      col = lulc_palette[2:9])
 
-plot(log(total_population2 + 1),
-     main = "h. log(population + 1)
-     2017",
+plot(urban_gradient2017,
+     main = "h. urban gradient 2017",
      axes = F, frame.plot=FALSE,
-     zlim = c(0, 12),
      col = lulc_palette[2:9])
 
-plot(diff_total_population,
-     main = "i. diff log(population + 1)",
+plot(diff_urban_gradient,
+     main = "i. diff urban gradient",
      axes = F, frame.plot=FALSE,
      col = lulc_diff[1:8])
 
-# dist int population
-plot((distance_int_pop1 / 1000),
-     main = "j. dist urban area 
-     (int density) 1993",
+# high urban gradient
+plot(high_urban_gradient1992,
+     main = "j. high density urban gradient 1992",
      axes = F, frame.plot=FALSE,
      col = lulc_palette[2:9])
 
-plot((distance_int_pop2 / 1000),
-     main = "k. dist urban area 
-     (int density) 2017",
+plot(high_urban_gradient2017,
+     main = "k. high density urban gradient 2017",
      axes = F, frame.plot=FALSE,
      col = lulc_palette[2:9])
 
-plot((diff_distance_int_pop / 1000),
-     main = "l. diff dist int pop",
-     axes = F, frame.plot=FALSE,
-     col = lulc_diff[1:8])
-
-# dist high population
-plot((distance_high_pop1 / 1000),
-     main = "m. dist urban area 
-     (int density) 1993",
-     axes = F, frame.plot=FALSE,
-     col = lulc_palette[2:9])
-
-plot((distance_high_pop2 / 1000),
-     main = "n. dist urban area 
-     (int density) 2017",
-     axes = F, frame.plot=FALSE,
-     col = lulc_palette[2:9])
-
-plot((diff_distance_high_pop / 1000),
-     main = "o. diff dist int pop",
-     axes = F, frame.plot=FALSE,
+plot(high_urban_gradient2017 - high_urban_gradient1992,
+     main = "o. diff urban gradient",
+     axes = l, frame.plot=FALSE,
      col = lulc_diff[1:8])
 dev.off()
 
 
-##########################################################
-########## precipitation ##########
+##----------------##
+## precipitation   ##
+##----------------##
+
 precip_palette <- brewer.pal(9, name = "Blues")
 precip_diff <- brewer.pal(9, name = "BrBG") 
 
@@ -357,8 +330,11 @@ plot(diff_precip_wet_qt,
      col = precip_diff)
 dev.off()
 
-##########################################################
-########## temp ##########
+
+##----------------##
+## temperature    ##
+##----------------##
+
 temp_palette <- brewer.pal(9, name = "YlOrRd")
 temp_diff <- brewer.pal(9, name = "RdYlBu") 
 
@@ -491,17 +467,17 @@ states <- read_state(
   year=2020,
   showProgress = FALSE)
 
-gb <- readRDS("../clean data/all_data_sdm_april7.rds") %>% 
+gb <- readRDS("../clean data/all_data_sdm_oct18.rds") %>% 
   filter(grepl("glabrata", species, ignore.case = TRUE)) %>%
   select(longitude, latitude) %>%
   mutate(species = "B. glabrata")
   
-gs <- readRDS("../clean data/all_data_sdm_april7.rds") %>% 
+gs <- readRDS("../clean data/all_data_sdm_oct18.rds") %>% 
   filter(grepl("straminea", species, ignore.case = TRUE)) %>%
   select(longitude, latitude) %>%
   mutate(species = "B. straminea")
 
-gt <- readRDS("../clean data/all_data_sdm_april7.rds") %>% 
+gt <- readRDS("../clean data/all_data_sdm_oct18.rds") %>% 
   filter(grepl("tenagophila", species, ignore.case = TRUE)) %>%
   select(longitude, latitude) %>%
   mutate(species = "B. tenagophila")
