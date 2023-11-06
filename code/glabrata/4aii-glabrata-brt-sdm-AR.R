@@ -1,4 +1,4 @@
-###glabrata model for sherlock
+### code to test model performance using spatial CV for the B. glabrata model (SA aggregate def of urban)
 
 
 #---------------------------------------#
