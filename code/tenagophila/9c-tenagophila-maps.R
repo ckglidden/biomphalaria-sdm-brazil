@@ -1,4 +1,4 @@
-### this code creates prediction maps for schisto paper
+### this code gets mean and sd for prediction maps (across the 25 bootstrapping iterations) of the B. straminea model (South America aggregate urban def)
 
 setwd("/Users/carolineglidden/Documents/shisto-project")
 library(raster)
