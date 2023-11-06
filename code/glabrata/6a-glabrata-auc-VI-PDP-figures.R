@@ -1,4 +1,4 @@
-##summary statistics and figures for glabrata sdm
+## summary statistics and figures for B. glabrata
 
 setwd('/Users/cglidden/Desktop/Restore/schisto_project/schisto-brazil-sdm-repo')
 
