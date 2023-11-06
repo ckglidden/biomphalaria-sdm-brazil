@@ -1,5 +1,4 @@
-##summary statistics and figures for straminea sdm
-##ckglidden
+## summary statistics and figures for B. straminea model performance and trait profiles (variable contribution and PDPs)
 
 setwd('/Users/cglidden/Documents/schisto_project/schisto-brazil-sdm-repo')
 
