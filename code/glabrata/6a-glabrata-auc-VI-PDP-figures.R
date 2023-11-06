@@ -1,4 +1,4 @@
-## summary statistics and figures for B. glabrata
+## summary statistics and figures for B. glabrata model performance and trait profiles (variable contribution and PDPs)
 
 setwd('/Users/cglidden/Desktop/Restore/schisto_project/schisto-brazil-sdm-repo')
 
