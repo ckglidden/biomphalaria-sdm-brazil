@@ -1,8 +1,8 @@
-###glabrata model for sherlock - bootstrapping for VIP and PDPs
+### B. glabrata model for generating model prediction maps using bootstrapping for calculating uncertainty
+
 #-------------------------------#
 # boosted regression tree       #
 #-------------------------------#
-
 
 library(xgboost) 
 library(rBayesianOptimization)
