@@ -1,4 +1,4 @@
-###tenagophila model for sherlock
+### code to test model performance using spatial CV for the B. tenagophila model (SA aggregate def of urban)
 
 
 #---------------------------------------#
