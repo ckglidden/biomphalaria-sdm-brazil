@@ -1,4 +1,4 @@
-#### cleaning gee data to use in the schisto sdm analysis
+#### This code cleans the environmental data downloaded from GEE for a training and validationa dataset (2017-2020)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
