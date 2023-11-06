@@ -1,4 +1,5 @@
-###straminea model for sherlock - bootstrapping for VIP and PDPs
+### code for B. straminea model (UN urban def) - bootstrapping for VIP and PDPs
+
 #-------------------------------#
 # boosted regression tree       #
 #-------------------------------#
