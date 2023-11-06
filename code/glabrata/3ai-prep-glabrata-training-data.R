@@ -1,4 +1,4 @@
-## code to clean training data for B. glabrata model (2000-2017 data)
+## code to clean training and validation data for B. glabrata model (2000-2017 data)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
