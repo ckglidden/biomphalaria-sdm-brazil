@@ -1,4 +1,4 @@
-#### PREP TENAGOPHILA DATA
+## code to clean training and validation data for B. tenagophila model (2000-2017 data)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
