@@ -1,4 +1,5 @@
-###tenagophila model for sherlock - bootstrapping for VIP and PDPs
+### B. tenagophila model for generating model prediction maps using bootstrapping for calculating uncertainty
+
 #-------------------------------#
 # boosted regression tree       #
 #-------------------------------#
