@@ -1,4 +1,4 @@
-###glabrata model for sherlock - bootstrapping for VIP and PDPs
+### code for B. glabrata model (UN urban def) - bootstrapping for VIP and PDPs
 #-------------------------------#
 # boosted regression tree       #
 #-------------------------------#
