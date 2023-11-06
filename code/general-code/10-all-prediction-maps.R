@@ -1,4 +1,4 @@
-### this code creates prediction maps for schisto paper
+### this code creates prediction maps for each Biomphalaria snail species, including the counterfactual maps
 
 setwd("/Users/carolineglidden/Documents/shisto-project")
 library(raster)
