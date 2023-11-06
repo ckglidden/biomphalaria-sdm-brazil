@@ -1,4 +1,5 @@
-###straminea model for sherlock - bootstrapping for VIP and PDPs
+### B. straminea model for generating model prediction maps using bootstrapping for calculating uncertainty
+
 #-------------------------------#
 # boosted regression tree       #
 #-------------------------------#
