@@ -1,4 +1,4 @@
-## CODE TO SET UP DATA FOR FINAL SCHISTO ANALYSIS FOR STRAMINEA
+## code to clean training and validation data for B. straminea model (2000-2017 data)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
