@@ -1,4 +1,4 @@
-###straminea model for sherlock
+### code to test model performance using spatial CV for the B. straminea model (SA aggregate def of urban)
 
 
 #---------------------------------------#
