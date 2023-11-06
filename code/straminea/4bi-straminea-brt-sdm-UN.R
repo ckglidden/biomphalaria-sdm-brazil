@@ -1,4 +1,4 @@
-###straminea model for sherlock
+### code to test model performance using spatial CV for the B. straminea model (UN def of urban)
 
 
 #---------------------------------------#
