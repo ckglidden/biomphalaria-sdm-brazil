@@ -1,4 +1,4 @@
-## code to clean test data for B. glabrata model (2000-2017 data)
+## code to clean test data for B. glabrata model (1992-2000 data)
 
 ##-------------------------------------------##
 ## set wd & load libraries                   ##
