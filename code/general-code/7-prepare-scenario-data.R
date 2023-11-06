@@ -1,4 +1,4 @@
-#code to prepare dataframes for creating maps
+# this code to prepare dataframes for creating current, historical, and counterfactual predictions
 
 ##------------------------------------##
 ## set wd & load necessary packages.  ##
