@@ -1,5 +1,4 @@
-##summary statistics and figures for tenagophila sdm
-##ckglidden
+## summary statistics and figures for B. tenagophila model performance and trait profiles (variable contribution and PDPs)
 
 setwd('/Users/cglidden/Documents/schisto_project/schisto-brazil-sdm-repo')
 setwd('/Users/cglidden/Desktop/Restore/schisto_project/schisto-brazil-sdm-repo')
