@@ -1,3 +1,4 @@
+###### code to conver mapbiomas table to rasters 
 library(sf)
 library(raster)
 library(dplyr)
