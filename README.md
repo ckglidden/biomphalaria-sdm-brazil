@@ -16,5 +16,5 @@ This repo contains
 
  3) Occurrence and background points in the zipped file 'all_points_schisto_sdm' and is also available as a feature collection (```ee.FeatureCollection('users/cglidden/all_points_schisto_sdm');```)
 
-> For the R code to work using the paths specified in each script, you will need to create a 'raw-data', 'clean-data', and 'output' directory, each with a sub-directory for each species.
+>> For the R code to work using the paths specified in each script, you will need to create a 'raw-data', 'clean-data', and 'output' directory, each with a sub-directory for each species.
   
