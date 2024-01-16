@@ -20,8 +20,12 @@ This repo contains
 3) R code to clean feature data, evaluate model performance, test model on historical data, and create Brazil-wide predictions (historical, current, and counterfactual scenarios) in 'code' directory. The code is numbered in the order it should be run. A portion of the analysis is run separately for each species, with the scripts found in species specific directorys, and titled with an a (indicating *B. glabrata*), a b (indicating *B. straminea*), or a c (indicating *B. tenagophila*). Model performance, variable importance, and partial dependence plots were created for analyses using the South American definition of an urban (indicated by a ii at the start of the script title and AR at the end) or the UN definition of urban area (indicated by a i at the start of the script title and UN at the end). 
    <small>* Clean feature data scripts: 'general-code/1-join-feature-collections.R', 'general-code/2.1-clean-merge-training-data.R', 'general-code/2.2-clean-merge-training-data.R'
    * Thin data sets scripts: '**(species name)**/ 3i **(a, b, c)** -prep- **(species name)**-training-data.R', '**(species name)**/ 3ii **(a, b, c)** -prep- **(species name)**-test-data.R'
+     * e.g., 'glabrata/3ia-prep-glabrata-training-data.R', 'glabrata/3iia-prep-glabrata-test-data.R'
    * Evaluate model performance via 5-fold CV: '**(species name)**/ 4 **(a, b, c)** - **(species name)** -sdm-brt.R'
+     * e.g., 'glabrata/4a-glabrata-sdm-brt.R'
    * Test model performance & inspect results via variable contribution and partial dependence plots: '**(species name)**/ 5 **(a, b, c)** - **(species name)**-variableImp.R'
+     * e.g., 'glabrata/5a-glabrata-variableImp.R'
    * Prepare scenario data for Brazil-wide predictions: 'general-code/6-prepare-scenario-data.R'
-   * Estimate Brazil-wide predictions: '**(species name)**/ 7 **(a, b, c)** - **(species name)**-prediction-maps-AR.R'</small>
+   * Estimate Brazil-wide predictions: '**(species name)**/ 7 **(a, b, c)** - **(species name)**-prediction-maps-AR.R'
+     * e.g., 'glabrata/7a-glabrata-prediction-maps-AR.R </small>
 >> For the R code to work using the paths specified in each script, you will need to also create a 'clean-data' and 'output' directory, each with a sub-directory for each species.
