@@ -14,5 +14,7 @@ This repo contains
    * Prepare scenario data for Brazil-wide predictions: 'general-code/6-prepare-scenario-data.R'
    * Estimate Brazil-wide predictions: '7 **(a, b, c)** - **(species name)**-prediction-maps-AR.R'
 
- > Occurrence and background points are in the zipped file 'all_points_schisto_sdm' and is also available as a feature collection (```ee.FeatureCollection('users/cglidden/all_points_schisto_sdm');```)
- *
+ 3) Occurrence and background points in the zipped file 'all_points_schisto_sdm' and is also available as a feature collection (```ee.FeatureCollection('users/cglidden/all_points_schisto_sdm');```)
+
+> For the R code to work using the paths specified in each script, you will need to create a 'raw-data', 'clean-data', and 'output' directory, each with a sub-directory for each species.
+  
