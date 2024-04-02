@@ -12,7 +12,6 @@ This repo contains
 > > * For R script 2.1 & 2.2:
 > >   *  'baseline-vars-schisto.ipynb' produces 'raw-data/gee-data/all_points_sdm_misc_vars.shp'
 > >   *  'landuse-schisto-vars.ipynb' produces 'raw-data/gee-data/all_points_sdm_lulc_crops.csv'
-> >   *  
 > >   *   'create-distance-to-rural.ipynb' produces 'raw-data/gee-data/cleaned_schisto_ruralCC_oct102023.csv'
 > >   *  'create-distance-to-urban-AR.ipynb' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_AR_oct102023.csv'
 > >   *  'create-distance-to-urban-UN.ipynb' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_UN_oct102023.csv'
