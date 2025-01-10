@@ -1,6 +1,6 @@
 
 ##---------------------
-## This code downloads static environmental variables for Glidden et al. 2023 Nat Communications
+## This code downloads climate variables for Glidden et al. 2023 Nat Communications
 ## NOTE: This is written to be run in Google Colab
 ##---------------------
 import ee
