@@ -6,9 +6,9 @@ bioRxiv 2024.01.03.574120; doi: https://doi.org/10.1101/2024.01.03.574120
 >
 This repo contains
 1) Occurrence and background points in the zipped file 'all_points_schisto_sdm' and is also available as a feature collection (```ee.FeatureCollection('users/cglidden/all_points_schisto_sdm');```)
-2) Python code(GEE API) to down load environmental feature data from Google Earth Engine (code in the 'schisto-env-download' directory)
+2) Python code (GEE API) to download environmental feature data from Google Earth Engine (code in the 'schisto-env-download' directory)
  >> This code will save cvs and geoTiffs that will be used in the R scripts, for the code to work with the specified paths, download the data into a 'raw-data/gee-data' directory/subdirectory
-> > The following python codes produce the following datasets used in each R script:
+> > The following files produce the following datasets used in the R script:
 > > * For R script 2.1 & 2.2:
 > >   *  'baseline-vars-schisto.ipynb' produces 'raw-data/gee-data/all_points_sdm_misc_vars.shp'
 > >   *  'landuse-schisto-vars.ipynb' produces 'raw-data/gee-data/all_points_sdm_lulc_crops.csv'
