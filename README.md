@@ -1,7 +1,7 @@
 # biomphalaria-sdm-brazil
 > Code for: *Climate and urbanization drive changes in the habitat suitability of Schistosoma mansoni competent snails in Brazil*.
 Caroline K. Glidden, Alyson L. Singleton, Andrew Chamberlin, Roseli Tuan, Raquel G.S. Palasio, Roberta Lima Caldeira, Antônio Miguel V. Monteiro, Kamazima M. M. Lwiza, Ping Liu, Vivian Silva, Tejas S. Athni, Susanne H. Sokolow, Erin A. Mordecai, Giulio A. De Leo
-[https://www.nature.com/articles/s41467-024-48335-9]
+https://www.nature.com/articles/s41467-024-48335-9
 > 
 > Code written by Caroline K. Glidden; please contact cglidden@stanford.edu with any questions.
 >
@@ -11,11 +11,12 @@ This repo contains
  >> This code will save cvs and geoTiffs that will be used in the R scripts, for the code to work with the specified paths, download the data into a 'raw-data/gee-data' directory/subdirectory
 > > The following files produce the following datasets used in the R script:
 > > * For R script 2.1 & 2.2:
-> >   *  'baseline-vars-schisto.ipynb' produces 'raw-data/gee-data/all_points_sdm_misc_vars.shp'
-> >   *  'landuse-schisto-vars.ipynb' produces 'raw-data/gee-data/all_points_sdm_lulc_crops.csv'
-> >   *   'create-distance-to-rural.ipynb' produces 'raw-data/gee-data/cleaned_schisto_ruralCC_oct102023.csv'
-> >   *  'create-distance-to-urban-AR.ipynb' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_AR_oct102023.csv'
-> >   *  'create-distance-to-urban-UN.ipynb' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_UN_oct102023.csv'
+> >   *  'baseline-vars-schisto.py' produces 'raw-data/gee-data/all_points_sdm_misc_vars.shp'
+> >   *  'landuse-schisto-vars.py' produces 'raw-data/gee-data/all_points_sdm_lulc_crops.csv'
+> >   *  'create-distance-to-rural.py' produces 'raw-data/gee-data/cleaned_schisto_ruralCC_oct102023.csv'
+> >   *  'create-distance-to-urban-AR.py' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_AR_oct102023.csv'
+> >   *  'create-distance-to-urban-UN.py' produces 'raw-data/gee-data/cleaned_schisto_urbanCC_UN_oct102023.csv'
+> >   *  'chelsa-decades.py' produces 'raw-data/gee-data/all_sdm_points_chelsa_decadal.csv'
 > >   *  'download-geotiffs-predictions.ipynb' produces geoTiffs for R script 'general-code/6-prepare-scenario-data.R'  
 3) code: R code to clean feature data, evaluate model performance, test model on historical data, and create Brazil-wide predictions (historical, current, and counterfactual scenarios) in 'code' directory. The code is numbered in the order it should be run. A portion of the analysis is run separately for each species, with the scripts found in species specific directorys, and titled with an a (indicating *B. glabrata*), a b (indicating *B. straminea*), or a c (indicating *B. tenagophila*). Model performance, variable importance, and partial dependence plots were created for analyses using the South American definition of an urban (indicated by a ii at the start of the script title and AR at the end) or the UN definition of urban area (indicated by a i at the start of the script title and UN at the end).
    * *Clean feature data scripts:* 'general-code/1-join-feature-collections.R', 'general-code/2.1-clean-merge-training-data.R', 'general-code/2.2-clean-merge-training-data.R'
