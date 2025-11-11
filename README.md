@@ -30,3 +30,5 @@ This repo contains
    * *Estimate Brazil-wide predictions:* '**(species name)**/ 7 **(a, b, c)** - **(species name)**-prediction-maps-AR.R'
      * e.g., 'glabrata/7a-glabrata-prediction-maps-AR.R
 >> For the R code to work using the paths specified in each script, you will need to also create a 'clean-data' and 'output' directory, each with a sub-directory for each species.
+
+Please contact cglidden@stanford.edu for final prediction geoTiffs.
